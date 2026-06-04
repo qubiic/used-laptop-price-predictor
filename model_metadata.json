@@ -1,0 +1,33 @@
+{
+  "model_type": "Random Forest (Tuned)",
+  "best_params": {
+    "model__max_depth": 10,
+    "model__min_samples_leaf": 2,
+    "model__n_estimators": 200
+  },
+  "feature_names": [
+    "brand",
+    "cpu_gen",
+    "cpu_tier",
+    "ram_gb",
+    "ssd_gb",
+    "nvme",
+    "screen_inch",
+    "touchscreen",
+    "rating",
+    "is_ips",
+    "has_os_label",
+    "is_fhd",
+    "storage_type_bin",
+    "gpu_type_bin",
+    "sold_count_log"
+  ],
+  "metrics": {
+    "MAE": 686668.77,
+    "RMSE": 1091164.43,
+    "R2": 0.6451
+  },
+  "training_date": "2026-05-24",
+  "n_train": 124,
+  "n_test": 32
+}
