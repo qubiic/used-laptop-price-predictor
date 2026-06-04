@@ -11,16 +11,13 @@
 
 A machine learning regression system that predicts the market price of used laptops based on their hardware specifications. Data was scraped directly from a real Tokopedia store ([Specialist Laptop Second](https://www.tokopedia.com/specialistlaptop/product/)), giving the model real Indonesian market pricing.
 
-> **For a complete walkthrough** (scraping → cleaning → modeling → Streamlit deployment), see [PROJECT_GUIDE.md](PROJECT_GUIDE.md).
-
 ---
 
 ## Project Structure
 
 ```
 AOL ML/
-├── README.md                                  ← This file (quick overview)
-├── PROJECT_GUIDE.md                           ← Full project walkthrough + checklist
+├── README.md                                  ← This file
 ├── Proposal ML.pdf                            ← Original project proposal
 │
 ├── Data Pipeline
@@ -30,10 +27,14 @@ AOL ML/
 │   ├── laptops_raw.csv                        ← Raw scraped data (301 rows)
 │   └── laptops_clean.csv                      ← Clean dataset for ML (156 rows, 19 cols)
 │
-└── Machine Learning
-    ├── used_laptop_price_prediction.ipynb     ← Main notebook (EDA + training + backtesting)
-    ├── best_model.pkl                         ← Saved best model pipeline (Random Forest)
-    └── model_metadata.json                    ← Model metrics, features, hyperparameters
+├── Machine Learning
+│   ├── used_laptop_price_prediction.ipynb     ← Main notebook (EDA + training + backtesting)
+│   ├── best_model.pkl                         ← Saved best model pipeline (Random Forest)
+│   └── model_metadata.json                    ← Model metrics, features, hyperparameters
+│
+└── Deployment
+    ├── app.py                                 ← Streamlit web app
+    └── requirements.txt                       ← Python dependencies
 ```
 
 ---
@@ -98,8 +99,12 @@ Open `used_laptop_price_prediction.ipynb` in Jupyter / VS Code and run all cells
 python -m jupyter nbconvert --to notebook --execute --inplace used_laptop_price_prediction.ipynb
 ```
 
-### 3. Build the Streamlit app
-See [PROJECT_GUIDE.md → Step 5](PROJECT_GUIDE.md#step-5--streamlit-web-app-next-task) for the full UI spec and prediction code.
+### 3. Run the Streamlit app
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+Then open http://localhost:8501 in your browser.
 
 ---
 
