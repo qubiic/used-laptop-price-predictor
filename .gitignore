@@ -29,3 +29,10 @@ desktop.ini
 # Course-private docs (do not publish)
 Submit Final Project*.docx
 PROJECT_GUIDE.md
+
+# Presentation materials (submit separately via Binusmaya, not in repo)
+Naskah*.docx
+Presentation Script.docx
+slide_*.png
+eda_*.png
+benchmark_latency.py
