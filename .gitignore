@@ -26,13 +26,9 @@ desktop.ini
 # Streamlit
 .streamlit/secrets.toml
 
-# Course-private docs (do not publish)
-Submit Final Project*.docx
-PROJECT_GUIDE.md
-
-# Presentation materials (submit separately via Binusmaya, not in repo)
-Naskah*.docx
-Presentation Script.docx
-slide_*.png
-eda_*.png
+# Local working files
+*.docx
+*.md
+!README.md
+*.png
 benchmark_latency.py
