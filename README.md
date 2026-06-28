@@ -106,6 +106,9 @@ streamlit run app.py
 ```
 Then open http://localhost:8501 in your browser.
 
+Or use this streamlit link:
+https://used-laptop-price-predictor-g9gaykv4menkrwfrm2wwfe.streamlit.app/
+
 ---
 
 ## Dependencies
